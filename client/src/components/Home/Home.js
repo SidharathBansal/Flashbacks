@@ -35,7 +35,7 @@ const Home = () => {
   const history = useHistory();
 
   const searchPost = () => {
-    if (search.trim() === "" && tags) {
+    if ( tags.length === 0 && search.trim() === "") {
       setSearch("");
       setTags([]);
       return;

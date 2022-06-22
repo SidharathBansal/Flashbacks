@@ -1,0 +1,35 @@
+({ title, name, message, likes, selectedFile, _id }) => (
+                <Paper
+                  style={{
+                    margin: "20px",
+                    cursor: "pointer",
+                    padding: "7px",
+                    borderRadius: "10px",
+                    backgroundColor: "#f7f8fc",
+                  }}
+                  onClick={() => openPost(_id)}
+                  key={_id}
+                  elevation={4}
+                >
+                  <Typography gutterBottom variant="h5">
+                    {title}
+                  </Typography>
+                  <Typography gutterBottom variant="h6">
+                    {name}
+                  </Typography>
+                  {/* <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    {message.split(" ").splice(0, 20).join(" ")}...
+                  </Typography> */}
+                  <Typography gutterBottom variant="subtitle2">
+                    {message.split(" ").splice(0, 20).join(" ")}...
+                  </Typography>
+                  <Typography gutterBottom variant="subtitle1">
+                    Likes: {likes.length}
+                  </Typography>
+                  <img src={selectedFile} width="200px" />
+                </Paper>
+              )
